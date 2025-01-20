@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <main class="container my-5">
+        <section>
+            <h1 class="text-center" id="mainTitle" data-en="My Hobbies and Passions">Mes Loisirs et Passions</h1>
+            <p class="text-center" id="mainSubtitle" data-en="Discover what I am passionate about!">Découvrez ce qui me passionne !</p>
+            <div id="content">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="images/sécurité.jpg" class="card-img-top" alt="Sécurité">
+                            <div class="card-body">
+                                <h5 class="card-title" id="hobby1Title" data-en="Security">La sécurité</h5>
+                                <p class="card-text" id="hobby1Text" data-en="Since I was a child, I have been passionate about the physical security of property and people. Alarm systems, safes, locksmithing, I am well-informed on these subjects.">
+                                    Depuis tout petit, je suis passionné par la sécurité "physique" des biens et des personnes. 
+                                    Systèmes d'alarmes, coffres, serrurerie, je suis très renseigné sur ces sujets.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="images/escalade.jpg" class="card-img-top" alt="Escalade">
+                            <div class="card-body">
+                                <h5 class="card-title" id="hobby2Title" data-en="Climbing">L'escalade</h5>
+                                <p class="card-text" id="hobby2Text" data-en="I have been climbing for 10 years. I have passed the white, yellow, and orange passports, as well as a training course for Managing Personal Protective Equipment (PPE).">
+                                    Je pratique la grimpe depuis 10 ans. J'ai passé les passeports blanc, jaune et orange, ainsi 
+                                    qu'une formation Gestionnaire d'Equipements de Protection Individuelle (EPI).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="images/jeuxvidéo.jpg" class="card-img-top" alt="Jeux vidéo">
+                            <div class="card-body">
+                                <h5 class="card-title" id="hobby3Title" data-en="Video Games">Les jeux-vidéos</h5>
+                                <p class="card-text" id="hobby3Text" data-en="One of my hobbies has always been playing video games. From military tactics to role-playing, the games I play are very varied.">
+                                    Un de mes loisirs depuis toujours est de jouer aux jeux vidéo. Du tactique militaire au roleplay, 
+                                    les jeux auxquels je joue sont très variés.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Contenu principal -->
+    <main class="container my-5">
+        <!-- Section spécifique à la page Contact -->
+        <section>
+            <h1 class="text-center">Contactez-moi</h1>
+            <p class="text-center">Vous avez une question ou souhaitez en savoir plus ? N'hésitez pas à me contacter en remplissant le formulaire ci-dessous.</p>
+            
+            <!-- Formulaire de contact -->
+            <div id="contact-form" class="mt-5">
+                <form action="{{ path('app_eportfolio_contact') }}" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+                        <div class="invalid-feedback">
+                            Veuillez entrer votre nom.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+                        <div class="invalid-feedback">
+                            Veuillez entrer une adresse email valide.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Sujet</label>
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Sujet de votre message" required>
+                        <div class="invalid-feedback">
+                            Veuillez entrer un sujet.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                        <div class="invalid-feedback">
+                            Veuillez entrer votre message.
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    {% block javascripts %}
+        <script>
+            document.querySelector('form').addEventListener('submit', async function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(this);
+
+                try {
+                    const response = await fetch('{{ path('app_eportfolio_send_email') }}', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        alert('Votre message a été envoyé avec succès.');
+                        this.reset();
+                    } else {
+                        alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+                    }
+                } catch (error) {
+                    console.error('Erreur:', error);
+                    alert("Impossible d'envoyer le message. Vérifiez votre connexion et réessayez.");
+                }
+            });
+        </script>
+    {% endblock %}
+{% endblock %}

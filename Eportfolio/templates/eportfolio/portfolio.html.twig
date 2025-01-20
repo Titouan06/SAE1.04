@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <!-- Contenu principal -->
+    <main class="container my-5">
+        <!-- Section spécifique à la page E-Portfolio -->
+        <section>
+            <h1 class="text-center">Mon E-Portfolio</h1>
+            <p class="text-center">Découvrez mes compétences, mes projets et mes réalisations</p>
+            <!-- Contenu dynamique -->
+            <div id="content">
+                <!-- Compétences -->
+                <div class="mt-5">
+                    <h2 class="text-center">Compétences</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Installation Réseaux :</strong> Administration de réseaux sous Linux et Windows, câblage et soudure de fibre optique. J'ai également passé un QCM attestant mon niveau équivalent à une habiliation électrique BE Manoeuvre.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Développement Web :</strong> Création de sites dynamiques avec Symfony et Bootstrap. J'ai également créé un site html/css/js pour un projet de développement web.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Analyse de données :</strong> Utilisation d'outils comme Python pour traiter et analyser des données. J'ai réalisé un projet d'analyse de trames d'événements (traffic internet).
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Projets Réalisés -->
+                <div class="mt-5">
+                    <h2 class="text-center">Projets Réalisés</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="images/CaptureTP2R105.png" class="card-img-top" alt="Projet 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Installation des infrastructures réseau</h5>
+                                    <p class="card-text">Câblage d'un réseau LAN Ethernet et soudure de fibre optique.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="images/CaptureSAE104.png" class="card-img-top" alt="Projet 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Projet de Site Web</h5>
+                                    <p class="card-text">Développement d'un site de gestion de bibliothèque avec Symfony.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="images/CaptureSAE105.png" class="card-img-top" alt="Projet 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Analyse de trames</h5>
+                                    <p class="card-text">Automatisation de l'analyse de trames d'événements avec Python et création de rapports.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analyses Réflexives -->
+                <div class="mt-5">
+                    <h2 class="text-center">Analyses Réflexives</h2>
+                    <div>
+                        <p>Tout au long de ma formation, j'ai analysé mes projets et évalué mes progrès. Voici quelques points clés :</p>
+                        <ul>
+                            <li>Amélioration de mes compétences en installation de réseaux.</li>
+                            <li>Apprentissage de nouveaux langages et frameworks comme Symfony et Bootstrap.</li>
+                            <li>Amélioration de mes compétences en gestion de projet et en collaboration d'équipe.</li>
+                            <li>Développement d'une capacité à résoudre des problèmes techniques complexes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

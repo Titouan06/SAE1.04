@@ -1,0 +1,19 @@
+balise h1
+
+
+
+dans EportfolioController.php
+
+    #[Route('/mentions', name: 'app_eportfolio_mentions')]
+    public function mentions(): Response
+    {
+        return $this->render('eportfolio/mentions.html.twig', [
+            'controller_name' => 'EportfolioController',
+        ]);
+    }
+
+
+
+dans base.html.twig ligne 89
+
+{{ path('app_eportfolio_mentions') }}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- Contenu principal -->
+    <main class="container my-5">
+        <!-- Section spécifique à chaque page -->
+        <section>
+            <h1 class="text-center">Mon E-Portfolio</h1>
+            <p class="text-center">Accueil</p>
+            <!-- Contenu dynamique -->
+            <div id="content">
+                <div class="text-center">
+                    <h2>Bienvenue sur ma page d'accueil</h2>
+                    <p class="lead">Je suis Titouan FLOCH, étudiant en première année de BUT Réseaux et Télécommunications (BUT1 / RT1 Groupe A2) à l'IUT de Roanne.</p>
+                    <p class="mt-3">
+                        Passionné par la sécurité physique des biens et des personnes, je recherche un travail dans ce domaine pour mettre en pratique mes compétences et apprendre de nouvelles technologies.
+                    </p>
+                </div>
+                <div class="mt-5">
+                    <h3 class="text-center">Pour en savoir plus</h3>
+                    <div class="text-center">
+                        <p>Découvrez mes loisirs, passions et projets en explorant mon site !</p>
+                        <a href="{{ path('app_eportfolio_loisirs') }}" class="btn btn-primary">Voir mes loisirs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
