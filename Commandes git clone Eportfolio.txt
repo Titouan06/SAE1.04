@@ -1,0 +1,8 @@
+Création dossier SAE1.04
+
+cd Documents
+git clone https://github.com/Titouan06/SAE1.04.git   ###/!\Public
+composer install
+composer update ramsey/uuid
+Symfony serve:start
+http://127.0.0.1:8000/eportfolio

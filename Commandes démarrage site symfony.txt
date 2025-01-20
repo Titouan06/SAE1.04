@@ -1,0 +1,9 @@
+cd Eportfolio
+symfony server:stop
+php bin/console cache:clear
+symfony server:start
+
+http://127.0.0.1:8000/eportfolio
+http://127.0.0.1:8001/eportfolio
+http://127.0.0.1:8000/eportfolio/home
+php bin/console debug:router

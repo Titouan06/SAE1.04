@@ -1,0 +1,7 @@
+### xcopy /E /I <source_directory> <destination_directory>
+
+
+
+xcopy /E /I C:\Symfony\SAE1.04 C:\Users\titou\Documents\GitHub\SAE1.04
+cd Documents\GitHub\SAE1.04
+git add Eportfolio/
